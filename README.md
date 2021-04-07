@@ -1,2 +1,6 @@
 # numberfact-game
-Know Insane Number Facts 
+
+### VanillaJS App for knowing number facts.
+
+### Apllication URL
+### https://nishchay9518.github.io/numberfact-game/
