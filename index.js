@@ -6,9 +6,14 @@ form.addEventListener('submit' , (e) =>{
     const number = e.target.querySelector('input[type="number"]').value;
     const loadText = "Wait a little bit.. 🤔";
     fact.innerHTML = loadText;
-    const baseURL = 'http://numbersapi.com/';
+    const baseURL = 'https://cors-anywhere.herokuapp.com/http://numbersapi.com/';
 
-    fetch(baseURL + number)
+    fetch(baseURL + number,{
+        method:"GET",
+        headers:{
+          'X-Requested-With': 'text/html' 
+        }
+    })
     .then(response => response.text())
     .then(text => fact.innerHTML = text)
 })
